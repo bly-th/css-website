@@ -14,9 +14,9 @@ module.exports = (config) => {
   // Syntax Highlight
   config.addPlugin(syntaxHighlight);
 
-  // Get Blyth Css
-  config.addFilter('blythcss', function (file) {
-    const data = fs.readFileSync(`./node_modules/blyth-css/src/utility/css/${file}.css`, 'utf8');
+  // Get Blyth file
+  config.addFilter('blyth', function (file) {
+    const data = fs.readFileSync(`./node_modules/blyth-css/src/${file}`, 'utf8');
     return data;
   });
 

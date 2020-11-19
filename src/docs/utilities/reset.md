@@ -10,5 +10,5 @@ eleventyNavigation:
 Our reset utility is constructed as follows:
 
 ```css
-{{ "reset" | blythcss | safe }}
+{{ "utility/css/reset.css" | blythcss | safe }}
 ```

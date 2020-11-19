@@ -10,5 +10,5 @@ eleventyNavigation:
 Our flow utility is constructed as follows:
 
 ```css
-{{ "flow" | blythcss | safe }}
+{{ "utility/css/flow.css" | blythcss | safe }}
 ```

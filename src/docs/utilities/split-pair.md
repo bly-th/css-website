@@ -10,5 +10,5 @@ eleventyNavigation:
 Our split-pair utility is constructed as follows:
 
 ```css
-{{ "split-pair" | blythcss | safe }}
+{{ "utility/css/split-pair.css" | blythcss | safe }}
 ```

@@ -10,5 +10,5 @@ eleventyNavigation:
 Our breakout-button utility is constructed as follows:
 
 ```css
-{{ "breakout-button" | blythcss | safe }}
+{{ "utility/css/breakout-button.css" | blythcss | safe }}
 ```
