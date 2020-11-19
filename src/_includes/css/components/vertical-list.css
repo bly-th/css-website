@@ -10,8 +10,16 @@ ul.vertical-list {
   list-style-type: none;
   padding: 0;
   margin: 0.25rem 0 2rem;
+  color: var(--color-mid-grey);
 }
 
 .vertical-list li a {
+  display: inline-block;
+  margin: 0.5em 0;
   text-decoration: none;
+  line-height: 1;
+}
+
+.vertical-list li.active a {
+  border-bottom: 3px solid currentColor;
 }

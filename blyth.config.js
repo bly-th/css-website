@@ -7,6 +7,7 @@ const theme = {
     primary: '#0C2641',
     light: '#ffffff',
     dark: '#020f2d',
+    'mid-grey': '#464646',
   },
   fonts: {
     base: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
