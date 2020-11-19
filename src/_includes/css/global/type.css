@@ -1,0 +1,63 @@
+body {
+  font-family: var(--font-base);
+  font-size: var(--step-0);
+  color: var(--color-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: var(--size-300);
+  line-height: 1.125;
+}
+
+h1 {
+  font-size: var(--step-5);
+}
+
+h2 {
+  font-size: var(--step-4);
+}
+
+h3 {
+  font-size: var(--step-3);
+}
+
+h4 {
+  font-size: var(--step-1);
+}
+
+h5 {
+  font-size: var(--step-0);
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: var(--step--1);
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: currentColor;
+}
+
+.link {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid currentColor;
+  text-decoration: none;
+}
+
+.split-pair h2:last-child,
+.split-pair p:last-child {
+  margin: 0;
+}

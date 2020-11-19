@@ -1,0 +1,69 @@
+{% set css %}
+  {% include "css/utility/breakout-button.css" %}
+  {% include "css/utility/reset.css" %}
+  {% include "css/utility/split-pair.css" %}
+  {% include "css/utility/tokens.css" %}
+  {% include "css/utility/type-scale.css" %}
+  {% include "css/utility/visibility.css" %}
+  {% include "css/utility/wrapper.css" %}
+  {% include "css/components/button.css" %}
+  {% include "css/components/content-wrapper.css" %}
+  {% include "css/components/hero.css" %}
+  {% include "css/components/vertical-list.css" %}
+  {% include "css/global/code.css" %}
+  {% include "css/global/global.css" %}
+  {% include "css/global/site-header.css" %}
+  {% include "css/global/type.css" %}
+{% endset %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'partials/meta.njk' %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <div class="site-header__inner">
+          <a href="/" class="site-header__logo">
+            {% include '../../img/logo.svg' %}
+          </a>
+          
+          <nav class="site-header__navigation">
+            <a href="https://github.com/ryangittings/blyth-css" target="_blank" rel="noopener noreferrer">{% include '../../img/icons/github.svg' %}</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="[ hero ] [ color-light ]">
+      <div class="wrapper">
+        <div class="measure-long">
+          <h1>The <u>CSS</u> toolkit for flexible, scalable code.</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="content-wrapper">
+        <div class="content-wrapper__sidebar">
+        {%- if eleventyNavigation -%}
+          {%- set navKey = eleventyNavigation.key -%}
+        {%- endif -%}
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({ activeKey: navKey, listClass: 'vertical-list', activeListItemClass: 'active' }) | safe }}
+        </div>
+        <main class="content-wrapper__main">
+          {{ content | safe }}
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

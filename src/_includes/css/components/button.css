@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  font-weight: 500;
+  background: var(--color-light);
+  padding: var(--step--2) var(--step-2);
+  border-radius: var(--radius-normal);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-primary);
+  transition: 0.4s all cubic-bezier(0.28, 0.84, 0.42, 1);
+  -webkit-appearance: none;
+  border: none;
+}
+
+.button:after {
+  content: '\A0\A0\2192';
+  display: inline-block;
+  font-weight: 400;
+  transform-origin: center;
+}
+
+.button:hover {
+  background: var(--color-cream);
+}

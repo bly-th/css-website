@@ -1,0 +1,17 @@
+ul.vertical-list {
+  margin-bottom: 2rem;
+}
+
+.vertical-list > li > a {
+  font-weight: bold;
+}
+
+.vertical-list li ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.25rem 0 2rem;
+}
+
+.vertical-list li a {
+  text-decoration: none;
+}

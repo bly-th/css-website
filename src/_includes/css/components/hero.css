@@ -1,0 +1,8 @@
+.hero {
+  background: url('/img/hero.svg') center / cover;
+  padding: 10rem 0 5rem;
+}
+
+.hero h1 {
+  margin-bottom: 0;
+}

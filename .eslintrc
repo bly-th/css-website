@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "max-len": "off",
+    "react/display-name": [0, { "ignoreTranspilerName": true }],
+    "react/prop-types": 0
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "document": false,
+    "window": false,
+    "grecaptcha": false
+  }
+}

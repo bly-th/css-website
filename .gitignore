@@ -1,0 +1,10 @@
+.DS_Store
+bower_components
+node_modules
+npm-debug.log
+.remote-sync.json
+.htaccess
+admin/resources
+assets/css/app.min.css.map
+.next
+dist

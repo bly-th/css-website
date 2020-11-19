@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: 1px solid var(--color-dark);
+  outline-offset: 0.25rem;
+}
+
+:hover:focus {
+  outline: 0;
+}

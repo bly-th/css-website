@@ -1,0 +1,26 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 10;
+  color: var(--color-light);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__logo svg {
+  width: 100%;
+  max-width: 10rem;
+}
+
+.site-header__navigation svg,
+.site-header__navigation img {
+  display: block;
+  height: 1.25rem;
+}
