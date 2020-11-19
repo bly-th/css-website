@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   z-index: 10;
   color: var(--color-light);
 }
@@ -16,11 +16,11 @@
 
 .site-header__logo svg {
   width: 100%;
-  max-width: 10rem;
+  max-width: 8rem;
 }
 
 .site-header__navigation svg,
 .site-header__navigation img {
   display: block;
-  height: 1.25rem;
+  height: 1.5rem;
 }

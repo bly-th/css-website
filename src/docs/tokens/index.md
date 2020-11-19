@@ -2,7 +2,7 @@
 title: Design Tokens
 eleventyNavigation:
   key: Design Tokens
-  order: 2
+  order: 3
 ---
 
 ## Design Tokens
