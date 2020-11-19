@@ -20,6 +20,6 @@ ul.vertical-list {
   line-height: 1;
 }
 
-.vertical-list li.active a {
+.vertical-list li.active > a {
   border-bottom: 3px solid currentColor;
 }
