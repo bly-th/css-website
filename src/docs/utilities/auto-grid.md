@@ -10,5 +10,5 @@ eleventyNavigation:
 Our auto-grid utility is constructed as follows:
 
 ```css
-{{ "utility/css/auto-grid.css" | blythcss | safe }}
+{{ "utility/css/auto-grid.css" | blyth | safe }}
 ```
