@@ -1,22 +1,18 @@
-const windows = document.querySelectorAll('.os-window__content');
+const codeWindows = document.querySelectorAll('.os-window__content');
 
-Array.from(windows).forEach((window) => {
-  const entries = window.querySelectorAll('pre');
+Array.from(codeWindows).forEach((codeWindow) => {
+  const entries = codeWindow.querySelectorAll('pre');
 
   const codeEntries = Array.from(entries).map((entry) => {
     return entry.outerHTML;
   });
 
-  console.log(codeEntries);
+  codeWindow.innerHTML = '';
 
-  const typewriter = new Typewriter(window, {
+  const typewriter = new Typed(codeWindow, {
     loop: true,
-    delay: 150,
-  });
-
-  codeEntries.forEach((entry) => {
-    typewriter.typeString(entry);
-    typewriter.deleteAll();
+    typeSpeed: 100,
+    strings: codeEntries,
   });
 
   typewriter.start();

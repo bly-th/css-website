@@ -7,7 +7,7 @@ body {
 }
 
 :focus {
-  outline: 1px solid var(--color-dark);
+  outline: 1px solid currentColor;
   outline-offset: 0.25rem;
 }
 
