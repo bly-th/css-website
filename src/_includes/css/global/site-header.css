@@ -20,6 +20,10 @@
   max-width: 8rem;
 }
 
+.site-header__logo svg .st3 {
+  fill: var(--color-light);
+}
+
 .site-header__navigation {
   flex: 1;
   min-width: 18rem;
