@@ -14,9 +14,14 @@ module.exports = (config) => {
   // Syntax Highlight
   config.addPlugin(syntaxHighlight);
 
+  // Get line length
+  config.addFilter('lineLength', function (txt) {
+    return txt.split('\n').length;
+  });
+
   // Get Blyth file
   config.addFilter('blyth', function (file) {
-    const data = fs.readFileSync(`./node_modules/blyth-css/src/${file}`, 'utf8');
+    const data = fs.readFileSync(`./node_modules/@bly-th/css/src/${file}`, 'utf8');
     return data;
   });
 

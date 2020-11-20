@@ -1,8 +1,5 @@
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
   padding: 1.5rem 0;
   z-index: 10;
   color: var(--color-light);
@@ -11,12 +8,22 @@
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.site-header__logo {
+  margin-right: var(--size-900);
 }
 
 .site-header__logo svg {
   width: 100%;
   max-width: 8rem;
+}
+
+.site-header__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .site-header__navigation svg,

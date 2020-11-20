@@ -4,13 +4,16 @@ const theme = {
     lg: '68em',
   },
   colors: {
-    primary: '#0C2641',
     light: '#ffffff',
-    dark: '#020f2d',
-    'mid-grey': '#464646',
+    dark: '#1F2021',
+    'dark-elevated': '#22262B',
+    green: '#61C453',
+    amber: '#F4BD4E',
+    red: '#ED695F',
   },
   fonts: {
-    base: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    heading: "'Work Sans', sans-serif",
+    base: "'Fira Code', monospace",
   },
   sizeScale: {
     200: 'var(--step--2)',
@@ -18,9 +21,9 @@ const theme = {
     400: 'var(--step-0)',
     500: 'var(--step-1)',
     600: 'var(--step-2)',
-    700: 'var(--step-4)',
-    800: 'var(--step-6)',
-    900: 'var(--step-8)',
+    700: 'var(--step-3)',
+    800: 'var(--step-4)',
+    900: 'var(--step-5)',
   },
 };
 
@@ -108,8 +111,7 @@ module.exports = {
     weight: {
       items: {
         light: '300',
-        regular: '400',
-        mid: '600',
+        mid: '500',
         bold: '700',
       },
       property: 'font-weight',

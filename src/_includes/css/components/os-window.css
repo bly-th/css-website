@@ -1,0 +1,43 @@
+.os-window {
+  position: relative;
+  border-radius: 8px;
+  background: var(--color-dark-elevated);
+}
+
+.os-window__toolbar {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.os-window__toolbar-item {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+}
+
+.os-window__main {
+  display: flex;
+}
+
+ol.os-window__numbers {
+  background: #000;
+  padding: 0.75rem;
+  line-height: 1.5;
+  opacity: 0.6;
+}
+
+.os-window__content :not(pre) > code[class*='language-'],
+.os-window__content pre[class*='language-'] {
+  padding: 0.75rem;
+  margin: 0;
+  background: none;
+  color: var(--color-light);
+}
+
+.os-window__content code[class*='language-'],
+.os-window__content pre[class*='language-'] {
+  color: currentColor;
+}

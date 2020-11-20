@@ -1,0 +1,19 @@
+---
+layout: layouts/default.njk
+---
+
+<section class="pad-top-900 pad-bottom-900">
+  <div class="wrapper">
+    <div class="content-wrapper">
+      <div class="content-wrapper__sidebar">
+      {%- if eleventyNavigation -%}
+        {%- set navKey = eleventyNavigation.key -%}
+      {%- endif -%}
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({ activeKey: navKey, listClass: 'vertical-list', activeListItemClass: 'active' }) | safe }}
+      </div>
+      <main class="content-wrapper__main">
+        {{ content | safe }}
+      </main>
+    </div>
+  </div>
+</section>
