@@ -1,0 +1,18 @@
+<div class="os-window">
+  <div class="os-window__toolbar">
+    <span class="[ os-window__toolbar-item ] [ bg-red ]"></span>
+    <span class="[ os-window__toolbar-item ] [ bg-amber ]"></span>
+    <span class="[ os-window__toolbar-item ] [ bg-green ]"></span>
+  </div>
+  <div class="os-window__main">
+    <ol class="os-window__numbers">
+      {% set length = content | lineLength %}
+      {% for i in range(1, length) %}
+        <li>{{ i }}</li>
+      {% endfor %}
+    </ol>
+    <div class="os-window__content">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>

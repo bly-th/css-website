@@ -2,6 +2,7 @@ const CleanCSS = require('clean-css');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const nunjucks = require('nunjucks');
 const fs = require('fs');
 
 module.exports = (config) => {
@@ -15,14 +16,25 @@ module.exports = (config) => {
   config.addPlugin(syntaxHighlight);
 
   // Get line length
-  config.addFilter('lineLength', function (txt) {
-    return txt.split('\n').length;
-  });
+  const lineLength = (txt) => {
+    return txt.split('<br>').length;
+  };
+
+  config.addFilter('lineLength', lineLength);
 
   // Get Blyth file
   config.addFilter('blyth', function (file) {
     const data = fs.readFileSync(`./node_modules/@bly-th/css/src/${file}`, 'utf8');
     return data;
+  });
+
+  // Windows shortcode
+  config.addPairedShortcode('oswindow', (content) => {
+    const env = nunjucks.configure();
+    env.addFilter('lineLength', lineLength);
+    return env.render('./src/_includes/partials/os-window.njk', {
+      content,
+    });
   });
 
   // Minify css

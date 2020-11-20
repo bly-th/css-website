@@ -8,32 +8,12 @@ title: Home
       <h1>A truly versatile CSS toolkit.</h1>
       <p>Made with ❤️ for HTML & CSS programmers</p>
     </div>
-  </div>
-</section>
 
-<section class="pad-top-900 pad-bottom-900">
-  <div class="wrapper">
-    <div class="os-window">
-      <div class="os-window__toolbar">
-        <span class="[ os-window__toolbar-item ] [ bg-red ]"></span>
-        <span class="[ os-window__toolbar-item ] [ bg-amber ]"></span>
-        <span class="[ os-window__toolbar-item ] [ bg-green ]"></span>
-      </div>
-      <div class="os-window__main">
-        <ol class="os-window__numbers">
-          {% set content = "utility/css/breakout-button.css" | blyth | safe %}
-          {% set length = content | lineLength %}
-          {% for i in range(1, length) %}
-            <li>{{ i }}</li>
-          {% endfor %}
-        </ol>
-        <div class="os-window__content">
-          {% highlight "css" %}
-            {{ content }}
-          {% endhighlight %}
-        </div>
-      </div>
-    </div>
+    {% oswindow %}
+      {% highlight "css" %}
+        {{ "utility/css/breakout-button.css" | blyth | safe }}
+      {% endhighlight %}
+    {% endoswindow %}
   </div>
 </section>
 
