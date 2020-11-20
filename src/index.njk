@@ -58,22 +58,33 @@ eleventyNavigation:
 
   <div class="faux-background">
     <div class="wrapper">
-      {% oswindow %}
-        {% highlight "html" %}
-<h2 class="color-red">Test</h2>
+      {% oswindow "bash" %}
+        {% highlight "bash" %}
+blyth tokens add reset
+        {% endhighlight %}
+        {% highlight "bash" %}
+blyth tokens add auto-grid
+        {% endhighlight %}
+        {% highlight "bash" %}
+blyth tokens add wrapper
+        {% endhighlight %}
+        {% highlight "bash" %}
+blyth tokens add visually-hidden
         {% endhighlight %}
       {% endoswindow %}
     </div>
   </div>
 </section>
 
-<section class="pad-top-900 pad-bottom-900">
+<section class="pad-top-900 pad-bottom-900 bg-dark-background">
   <div class="[ wrapper ] [ text-align-center ]">
     <div class="measure-long">
       <h2>It’s platform agnostic, too.</h2>
       <p>Blyth is just a <strong>toolkit</strong>. It takes a bunch of config, and outputs CSS files to use in any type of project, be it a static site, React build or Next JS application. This means the CSS you write across all your projects can be consistent, and versatile. Tis’ beautiful.</p>
     </div>
+  </div>
 
+  <div class="wrapper">
     {% oswindow %}
       {% highlight "html" %}
 <h2 class="color-red">Test</h2>
@@ -83,4 +94,4 @@ eleventyNavigation:
 </section>
 
 <script src="js/vendor/typewriter.js" defer></script>
-<script src="js/components/intro.js" defer></script>
+<script src="js/components/oswindow.js" defer></script>

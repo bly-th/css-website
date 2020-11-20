@@ -1,0 +1,7 @@
+.site-footer {
+  padding: var(--size-700) 0;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}

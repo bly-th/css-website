@@ -24,8 +24,8 @@
 .os-window__inner {
   display: flex;
   flex-direction: column;
-  min-height: 25rem;
-  max-height: 40vw;
+  height: 30vw;
+  max-height: 30rem;
   overflow: auto;
 }
 
@@ -56,5 +56,6 @@ ol.os-window__numbers {
 
 .os-window__content code[class*='language-'],
 .os-window__content pre[class*='language-'] {
+  display: inline;
   color: currentColor;
 }

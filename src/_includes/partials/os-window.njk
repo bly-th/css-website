@@ -6,12 +6,14 @@
   </div>
   <div class="os-window__inner">
     <div class="os-window__main">
-      <ol class="os-window__numbers">
-        {% set length = content | lineLength %}
-        {% for i in range(1, length+1) %}
-          <li>{{ i }}</li>
-        {% endfor %}
-      </ol>
+      {% if type != "bash" %}
+        <ol class="os-window__numbers">
+          {% set length = content | lineLength %}
+          {% for i in range(1, length+1) %}
+            <li>{{ i }}</li>
+          {% endfor %}
+        </ol>
+      {% endif %}
       <div class="os-window__content">
         {{ content | safe }}
       </div>

@@ -1,27 +1,22 @@
 ul.horizontal-list {
   --horizontal-list-spacing: var(--size-200);
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 0 calc(var(--horizontal-list-spacing) * -1);
+  flex-wrap: wrap;
 }
 
 .horizontal-list li {
   display: inline-block;
-  margin: 0 var(--horizontal-list-spacing);
-}
-
-.horizontal-list li ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0.25rem 0 2rem;
-  color: var(--color-mid-grey);
+  flex-shrink: 0;
 }
 
 .horizontal-list li a {
   display: block;
   text-decoration: none;
   line-height: 1;
+  padding: var(--horizontal-list-spacing);
 }
 
 .horizontal-list li a.active {

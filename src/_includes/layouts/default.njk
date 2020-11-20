@@ -17,6 +17,7 @@
   {% include "css/components/vertical-list.css" %}
   {% include "css/global/code.css" %}
   {% include "css/global/global.css" %}
+  {% include "css/global/site-footer.css" %}
   {% include "css/global/site-header.css" %}
   {% include "css/global/type.css" %}
 {% endset %}
@@ -41,17 +42,17 @@
           <a href="/" class="site-header__logo">
             {% include '../../img/logo.svg' %}
           </a>
+
+          <ul class="site-header__summary horizontal-list">
+            <li><a href="https://github.com/ryangittings/blyth-css" target="_blank" rel="noopener noreferrer">{{ github.tag }}</a></li>
+            <li><a href="https://github.com/bly-th/css" target="_blank" rel="noopener noreferrer">{% include '../../img/icons/github.svg' %}</a></li>
+          </ul>
           
           <nav class="site-header__navigation">
             <ul class="horizontal-list">
               <li><a href="#">Why Blyth?</a></li>
-              <li><a href="#">Documentation</a></li>
+              <li><a href="/docs/">Documentation</a></li>
               <li><a href="#">Resources</a></li>
-            </ul>
-          
-            <ul class="site-header__summary horizontal-list">
-              <li><a href="https://github.com/ryangittings/blyth-css" target="_blank" rel="noopener noreferrer">v0.1.3</a></li>
-              <li><a href="https://github.com/bly-th/css" target="_blank" rel="noopener noreferrer">{% include '../../img/icons/github.svg' %}</a></li>
             </ul>
           </nav>
         </div>
@@ -59,5 +60,18 @@
     </header>
     
     {{ content | safe }}
+
+    <footer class="[ site-footer ] [ text-align-center ]">
+      <div class="wrapper">
+        <div class="gap-bottom-200">
+          <p>Made with ❤️ for HTML & CSS programmers</p>
+        </div>
+        
+        <ul class="[ horizontal-list ] [ text-200 ]">
+          <li><a href="https://github.com/bly-th/css-website/blob/main/{{ page.inputPath }}" target="_blank" rel="noopener noreferrer">Edit this page on GitHub</a></li>
+          <li><a href="https://twitter.com/ryangittings" target="_blank" rel="noopener noreferrer">Created by ryangittings</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
