@@ -1,9 +1,23 @@
-const code = document.querySelector('.os-window__content code');
-const html = code.innerHTML;
+const code = document.querySelector('.os-window__content');
+const blocks = document.querySelector('.os-window__blocks');
+const entries = blocks.querySelectorAll('pre');
 
-const typewriter = new Typewriter(code, {
+const codeEntries = Array.from(entries).map((entry) => {
+  return entry.querySelector('code').innerHTML;
+});
+
+console.log(codeEntries);
+
+const typewriter = new Typewriter('.os-window__output', {
   loop: true,
   delay: 75,
 });
 
-typewriter.typeString(html).start();
+codeEntries.forEach((entry) => {
+  typewriter.typeString(entry);
+  typewriter.deleteAll();
+});
+
+typewriter.start();
+
+blocks.innerHTML = '';

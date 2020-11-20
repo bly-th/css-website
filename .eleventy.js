@@ -1,49 +1,31 @@
-const CleanCSS = require('clean-css');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const nunjucks = require('nunjucks');
-const fs = require('fs');
+
+// Import filters
+const lineLengthFilter = require('./src/filters/line-length.js');
+const cssMinFilter = require('./src/filters/css-min.js');
+const blythFilter = require('./src/filters/blyth.js');
+
+// Import shortcodes
+const osWindowShortcode = require('./src/shortcodes/oswindow.js');
 
 module.exports = (config) => {
-  // Add navigation plugin
-  config.addPlugin(eleventyNavigationPlugin);
-
   // Deep data merge
   config.setDataDeepMerge(true);
 
-  // Syntax Highlight
+  // Add plugins
+  config.addPlugin(eleventyNavigationPlugin);
   config.addPlugin(syntaxHighlight);
-
-  // Get line length
-  const lineLength = (txt) => {
-    return txt.split('<br>').length;
-  };
-
-  config.addFilter('lineLength', lineLength);
-
-  // Get Blyth file
-  config.addFilter('blyth', function (file) {
-    const data = fs.readFileSync(`./node_modules/@bly-th/css/src/${file}`, 'utf8');
-    return data;
-  });
-
-  // Windows shortcode
-  config.addPairedShortcode('oswindow', (content) => {
-    const env = nunjucks.configure();
-    env.addFilter('lineLength', lineLength);
-    return env.render('./src/_includes/partials/os-window.njk', {
-      content,
-    });
-  });
-
-  // Minify css
-  config.addFilter('cssmin', function (code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
-  // Add items
   config.addPlugin(pluginRss);
+
+  // Add filters
+  config.addFilter('lineLength', lineLengthFilter);
+  config.addFilter('blyth', blythFilter);
+  config.addFilter('cssmin', cssMinFilter);
+
+  // Add shortcodes
+  config.addPairedShortcode('oswindow', osWindowShortcode);
 
   // Pass through
   config.addPassthroughCopy('./src/_redirects');
