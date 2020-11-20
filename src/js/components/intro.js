@@ -1,12 +1,11 @@
 const code = document.querySelector('.os-window__content');
-const blocks = document.querySelector('.os-window__blocks');
-const entries = blocks.querySelectorAll('pre');
+const entries = code.querySelectorAll('pre');
 
 const codeEntries = Array.from(entries).map((entry) => {
-  return entry.querySelector('code').innerHTML;
+  return entry.innerHTML;
 });
 
-const typewriter = new Typewriter('.os-window__output', {
+const typewriter = new Typewriter(code, {
   loop: true,
   delay: 150,
 });
@@ -17,5 +16,3 @@ codeEntries.forEach((entry) => {
 });
 
 typewriter.start();
-
-blocks.innerHTML = '';
