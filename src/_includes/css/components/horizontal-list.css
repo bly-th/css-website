@@ -24,6 +24,10 @@ ul.horizontal-list {
   line-height: 1;
 }
 
+.horizontal-list li a.active {
+  text-decoration: underline;
+}
+
 .horizontal-list li a svg {
   display: block;
 }

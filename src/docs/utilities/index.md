@@ -2,6 +2,7 @@
 title: Utilities
 eleventyNavigation:
   key: Utilities
+  parent: Home
   order: 4
 ---
 

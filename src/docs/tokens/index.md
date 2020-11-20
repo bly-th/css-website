@@ -2,6 +2,7 @@
 title: Design Tokens
 eleventyNavigation:
   key: Design Tokens
+  parent: Home
   order: 3
 ---
 

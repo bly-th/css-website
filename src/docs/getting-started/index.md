@@ -2,6 +2,7 @@
 title: Getting Started
 eleventyNavigation:
   key: Getting Started
+  parent: Home
   order: 1
 ---
 

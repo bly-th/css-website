@@ -1,7 +1,6 @@
 .content-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: var(--size-900) 0;
 }
 
 .content-wrapper__sidebar {

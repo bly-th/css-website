@@ -2,6 +2,7 @@
 title: Commands
 eleventyNavigation:
   key: Commands
+  parent: Home
   order: 2
 ---
 

@@ -1,4 +1,6 @@
 .os-window {
+  display: flex;
+  flex-direction: column;
   position: relative;
   border-radius: 8px;
   background: var(--color-dark-elevated);
@@ -8,6 +10,7 @@
   display: flex;
   padding: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 0 0;
 }
 
 .os-window__toolbar-item {
@@ -18,18 +21,28 @@
   border-radius: 100%;
 }
 
+.os-window__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 25rem;
+  max-height: 40vw;
+  overflow: auto;
+}
+
 .os-window__main {
   display: flex;
+  flex: 1;
 }
 
 ol.os-window__numbers {
-  background: #000;
+  background: var(--color-dark-background);
   padding: 0.75rem;
   line-height: 1.5;
   opacity: 0.6;
 }
 
 .os-window__content {
+  width: 100%;
   padding: 0.75rem;
 }
 

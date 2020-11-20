@@ -2,6 +2,23 @@
 layout: layouts/default.njk
 ---
 
+{% if eleventyNavigation and eleventyNavigation.key and eleventyNavigation.parent %}
+<nav class="[ breadcrumbs ] [ bg-dark-background ]" aria-labelledby="breadcrumb">
+  <div class="wrapper">
+    <h2 class="visually-hidden" id="breadcrumb">Breadcrumbs:</h2>
+    {% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+    <ul class="horizontal-list">
+      {% for entry in navPages %}
+        <li{% if entry.url == page.url %} class="active"{% endif %}>
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        </li>
+      {% endfor %}
+      <li><a href="{{ page.url }}" class="active">{{ title }}</a></li>
+    </ul>
+  </div>
+</nav>
+{% endif %}
+
 <section class="pad-top-900 pad-bottom-900">
   <div class="wrapper">
     <div class="content-wrapper">

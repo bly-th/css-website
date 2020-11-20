@@ -6,11 +6,9 @@ const codeEntries = Array.from(entries).map((entry) => {
   return entry.querySelector('code').innerHTML;
 });
 
-console.log(codeEntries);
-
 const typewriter = new Typewriter('.os-window__output', {
   loop: true,
-  delay: 75,
+  delay: 150,
 });
 
 codeEntries.forEach((entry) => {
