@@ -1,4 +1,4 @@
-const codeWindows = document.querySelectorAll('.os-window__content');
+const codeWindows = document.querySelectorAll('.os-window__code');
 
 Array.from(codeWindows).forEach((codeWindow) => {
   const entries = codeWindow.querySelectorAll('pre');
@@ -11,7 +11,7 @@ Array.from(codeWindows).forEach((codeWindow) => {
 
   const typewriter = new Typed(codeWindow, {
     loop: true,
-    typeSpeed: 100,
+    typeSpeed: 70,
     strings: codeEntries,
   });
 

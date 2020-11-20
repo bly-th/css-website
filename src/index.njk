@@ -16,9 +16,12 @@ eleventyNavigation:
     <div class="wrapper">
       {% oswindow %}
         {% highlight "html" %}
-<h2 class="color-red">
-  Test
-</h2>
+<h2 class="color-red">Test</h2>
+        {% endhighlight %}
+        {% highlight "css" %}
+.card h2 {
+  color: var(--color-red);
+}
         {% endhighlight %}
       {% endoswindow %}
     </div>
@@ -76,14 +79,19 @@ blyth tokens add visually-hidden
   <div class="[ wrapper ] [ text-align-center ]">
     <div class="measure-long">
       <h2>It’s platform agnostic, too.</h2>
-      <p>Blyth is just a <strong>toolkit</strong>. It takes a bunch of config, and outputs CSS files to use in any type of project, be it a static site, React build or Next JS application. This means the CSS you write across all your projects can be consistent, and versatile. Tis’ beautiful.</p>
+      <p>Blyth is just a <strong>toolkit</strong>. It takes a bunch of config, and outputs CSS files to use in any type of project, be it a static site, React build or Next JS application. You just need to set the project config in your package.json file. This means the CSS you write across all your projects can be consistent, and versatile. Tis’ beautiful.</p>
     </div>
   </div>
 
   <div class="wrapper">
-    {% oswindow %}
-      {% highlight "html" %}
-<h2 class="color-red">Test</h2>
+    {% oswindow "bash" %}
+      {% highlight "json" %}
+{
+  "blyth": {
+    "tokensOutputPath": "/css/utility/tokens.css",
+    "utilityOutputPath": "/css/utility"
+  },
+}
       {% endhighlight %}
     {% endoswindow %}
   </div>

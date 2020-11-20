@@ -46,6 +46,10 @@ ol.os-window__numbers {
   padding: 0.75rem;
 }
 
+.os-window__code {
+  display: inline;
+}
+
 .os-window__content :not(pre) > code[class*='language-'],
 .os-window__content pre[class*='language-'] {
   padding: 0;
