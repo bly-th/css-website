@@ -1,32 +1,31 @@
-const CleanCSS = require('clean-css');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const fs = require('fs');
+
+// Import filters
+const lineLengthFilter = require('./src/filters/line-length.js');
+const cssMinFilter = require('./src/filters/css-min.js');
+const blythFilter = require('./src/filters/blyth.js');
+
+// Import shortcodes
+const osWindowShortcode = require('./src/shortcodes/oswindow.js');
 
 module.exports = (config) => {
-  // Add navigation plugin
-  config.addPlugin(eleventyNavigationPlugin);
-
   // Deep data merge
   config.setDataDeepMerge(true);
 
-  // Syntax Highlight
+  // Add plugins
+  config.addPlugin(eleventyNavigationPlugin);
   config.addPlugin(syntaxHighlight);
-
-  // Get Blyth file
-  config.addFilter('blyth', function (file) {
-    const data = fs.readFileSync(`./node_modules/blyth-css/src/${file}`, 'utf8');
-    return data;
-  });
-
-  // Minify css
-  config.addFilter('cssmin', function (code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
-  // Add items
   config.addPlugin(pluginRss);
+
+  // Add filters
+  config.addFilter('lineLength', lineLengthFilter);
+  config.addFilter('blyth', blythFilter);
+  config.addFilter('cssmin', cssMinFilter);
+
+  // Add shortcodes
+  config.addPairedShortcode('oswindow', osWindowShortcode);
 
   // Pass through
   config.addPassthroughCopy('./src/_redirects');

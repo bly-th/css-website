@@ -1,9 +1,5 @@
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem 0;
+  position: relative;
   z-index: 10;
   color: var(--color-light);
 }
@@ -11,7 +7,12 @@
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+  margin: 1rem var(--size-900) 1rem 0;
 }
 
 .site-header__logo svg {
@@ -19,8 +20,23 @@
   max-width: 8rem;
 }
 
-.site-header__navigation svg,
-.site-header__navigation img {
+.site-header__navigation {
+  flex: 1;
+  min-width: 18rem;
+}
+
+ul.site-header__summary {
+  margin-left: auto;
+}
+
+@media (min-width: 64em) {
+  .site-header__summary {
+    order: 2;
+  }
+}
+
+.site-header__summary svg,
+.site-header__summary img {
   display: block;
   height: 1.5rem;
 }

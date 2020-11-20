@@ -1,17 +1,23 @@
 {% set css %}
   {% include "css/utility/breakout-button.css" %}
+  {% include "css/utility/faux-background.css" %}
+  {% include "css/utility/measure.css" %}
   {% include "css/utility/reset.css" %}
   {% include "css/utility/split-pair.css" %}
   {% include "css/utility/tokens.css" %}
   {% include "css/utility/type-scale.css" %}
   {% include "css/utility/visibility.css" %}
   {% include "css/utility/wrapper.css" %}
+  {% include "css/components/breadcrumbs.css" %}
   {% include "css/components/button.css" %}
   {% include "css/components/content-wrapper.css" %}
   {% include "css/components/hero.css" %}
+  {% include "css/components/horizontal-list.css" %}
+  {% include "css/components/os-window.css" %}
   {% include "css/components/vertical-list.css" %}
   {% include "css/global/code.css" %}
   {% include "css/global/global.css" %}
+  {% include "css/global/site-footer.css" %}
   {% include "css/global/site-header.css" %}
   {% include "css/global/type.css" %}
 {% endset %}
@@ -23,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include 'partials/meta.njk' %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Work+Sans:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
 
     <style>
       {{ css | cssmin | safe }}
@@ -36,34 +42,36 @@
           <a href="/" class="site-header__logo">
             {% include '../../img/logo.svg' %}
           </a>
+
+          <ul class="site-header__summary horizontal-list">
+            <li><a href="https://github.com/ryangittings/blyth-css" target="_blank" rel="noopener noreferrer">{{ github.tag }}</a></li>
+            <li><a href="https://github.com/bly-th/css" target="_blank" rel="noopener noreferrer">{% include '../../img/icons/github.svg' %}</a></li>
+          </ul>
           
           <nav class="site-header__navigation">
-            <a href="https://github.com/ryangittings/blyth-css" target="_blank" rel="noopener noreferrer">{% include '../../img/icons/github.svg' %}</a>
+            <ul class="horizontal-list">
+              <li><a href="#">Why Blyth?</a></li>
+              <li><a href="/docs/">Documentation</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
           </nav>
         </div>
       </div>
     </header>
+    
+    {{ content | safe }}
 
-    <section class="[ hero ] [ color-light ]">
+    <footer class="[ site-footer ] [ text-align-center ]">
       <div class="wrapper">
-        <div class="measure-long">
-          <h1>The CSS <u>toolkit</u> for flexible, scalable code.</h1>
+        <div class="gap-bottom-200">
+          <p>Made with ❤️ for HTML & CSS programmers</p>
         </div>
+        
+        <ul class="[ horizontal-list ] [ text-200 ]">
+          <li><a href="https://github.com/bly-th/css-website/blob/main/{{ page.inputPath }}" target="_blank" rel="noopener noreferrer">Edit this page on GitHub</a></li>
+          <li><a href="https://twitter.com/ryangittings" target="_blank" rel="noopener noreferrer">Created by ryangittings</a></li>
+        </ul>
       </div>
-    </section>
-
-    <div class="wrapper">
-      <div class="content-wrapper">
-        <div class="content-wrapper__sidebar">
-        {%- if eleventyNavigation -%}
-          {%- set navKey = eleventyNavigation.key -%}
-        {%- endif -%}
-        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({ activeKey: navKey, listClass: 'vertical-list', activeListItemClass: 'active' }) | safe }}
-        </div>
-        <main class="content-wrapper__main">
-          {{ content | safe }}
-        </main>
-      </div>
-    </div>
+    </footer>
   </body>
 </html>

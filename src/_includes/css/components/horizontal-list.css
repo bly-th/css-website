@@ -1,0 +1,28 @@
+ul.horizontal-list {
+  --horizontal-list-spacing: var(--size-200);
+
+  display: inline-flex;
+  align-items: center;
+  margin: 0 calc(var(--horizontal-list-spacing) * -1);
+  flex-wrap: wrap;
+}
+
+.horizontal-list li {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.horizontal-list li a {
+  display: block;
+  text-decoration: none;
+  line-height: 1;
+  padding: var(--horizontal-list-spacing);
+}
+
+.horizontal-list li a.active {
+  text-decoration: underline;
+}
+
+.horizontal-list li a svg {
+  display: block;
+}

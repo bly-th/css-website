@@ -1,0 +1,22 @@
+<div class="os-window">
+  <div class="os-window__toolbar">
+    <span class="[ os-window__toolbar-item ] [ bg-red ]"></span>
+    <span class="[ os-window__toolbar-item ] [ bg-amber ]"></span>
+    <span class="[ os-window__toolbar-item ] [ bg-green ]"></span>
+  </div>
+  <div class="os-window__inner">
+    <div class="os-window__main">
+      {% if type != "bash" %}
+        <ol class="os-window__numbers">
+          {% set length = content | lineLength %}
+          {% for i in range(1, length+1) %}
+            <li>{{ i }}</li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+      <div class="os-window__content">
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+</div>

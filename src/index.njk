@@ -1,0 +1,93 @@
+---
+title: A CSS Toolkit
+eleventyNavigation:
+  key: Home
+---
+
+<section class="pad-top-900">
+  <div class="[ wrapper ] [ text-align-center ]">
+    <div class="measure-long">
+      <h1>A truly versatile CSS toolkit.</h1>
+      <p>Made with ❤️ for HTML & CSS programmers who love lightweight, clean, reusable and scalable code. Blyth will allow you to organise properties every site has like fonts, colours, spacing, sizing and basically, anything you want.</p>
+    </div>
+  </div>
+
+  <div class="faux-background">
+    <div class="wrapper">
+      {% oswindow %}
+        {% highlight "html" %}
+<h2 class="color-red">
+  Test
+</h2>
+        {% endhighlight %}
+      {% endoswindow %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark-background pad-top-900">
+  <div class="[ wrapper ] [ text-align-center ]">
+    <div class="measure-long">
+      <h2>Create a CSS design system.</h2>
+      <p>Blyth can help you generate design tokens to keep propertes such as spacing, typography and colour consistent & reusable. They’re also available as both CSS variables and HTML classes. Wicked.</p>
+    </div>
+  </div>
+
+  <div class="faux-background faux-background--light">
+    <div class="wrapper">
+      {% oswindow %}
+        {% highlight "js" %}
+  {{ "tokens/default/config.js" | blyth | safe }}
+        {% endhighlight %}
+      {% endoswindow %}
+    </div>
+  </div>
+</section>
+
+<section class="pad-top-900">
+  <div class="[ wrapper ] [ text-align-center ]">
+    <div class="measure-long">
+      <h2>Scaffold out CSS utilities.</h2>
+      <p>How often do you find yourself using the same code across projects? CSS resets, wrappers and small accessbility helpers like visually hidden? Blyth can generate these for your project with just one command.</p>
+    </div>
+  </div>
+
+  <div class="faux-background">
+    <div class="wrapper">
+      {% oswindow "bash" %}
+        {% highlight "bash" %}
+blyth tokens add reset
+        {% endhighlight %}
+        {% highlight "bash" %}
+blyth tokens add auto-grid
+        {% endhighlight %}
+        {% highlight "bash" %}
+blyth tokens add wrapper
+        {% endhighlight %}
+        {% highlight "bash" %}
+blyth tokens add visually-hidden
+        {% endhighlight %}
+      {% endoswindow %}
+    </div>
+  </div>
+</section>
+
+<section class="pad-top-900 pad-bottom-900 bg-dark-background">
+  <div class="[ wrapper ] [ text-align-center ]">
+    <div class="measure-long">
+      <h2>It’s platform agnostic, too.</h2>
+      <p>Blyth is just a <strong>toolkit</strong>. It takes a bunch of config, and outputs CSS files to use in any type of project, be it a static site, React build or Next JS application. This means the CSS you write across all your projects can be consistent, and versatile. Tis’ beautiful.</p>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    {% oswindow %}
+      {% highlight "html" %}
+<h2 class="color-red">Test</h2>
+      {% endhighlight %}
+    {% endoswindow %}
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" defer></script>
+<script src="js/components/oswindow.js" defer></script>

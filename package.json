@@ -12,7 +12,7 @@
     "production": "npx eleventy"
   },
   "bin": {
-    "blyth": "node_modules/blyth-css/src/index.js"
+    "blyth": "node_modules/@bly-th/css/src/index.js"
   },
   "blyth": {
     "tokensOutputPath": "src/_includes/css/utility/tokens.css",
@@ -28,6 +28,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@bly-th/css": "^0.1.5",
     "clean-css": "^4.2.3",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "node-html-parser": "^2.0.0"
   }
 }

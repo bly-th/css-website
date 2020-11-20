@@ -2,6 +2,7 @@
 title: Getting Started
 eleventyNavigation:
   key: Getting Started
+  parent: Home
   order: 1
 ---
 
@@ -27,7 +28,7 @@ To get us started, add the following lines to your package.json:
 
 ```json
   "bin": {
-    "blyth": "node_modules/blyth-css/src/index.js"
+    "blyth": "node_modules/@bly-th/css/src/index.js"
   },
   "blyth": {
     "tokensOutputPath": "css/tokens.css",
