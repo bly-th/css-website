@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 2
 ---
 
-## Utility Command
+# Utility Command
 
 To add Blyth's baked in [utilities](/docs/utilities/) to your project, just run:
 
@@ -18,4 +18,12 @@ The files will be generated in your repo, and outputted to the `utilityOutputPat
 
 ```bash
 blyth utility add reset
+```
+
+## Chaining
+
+You can also chain your utilities, so you can add multiple utilities in just one line:
+
+```bash
+blyth utility add auto-grid reset
 ```
