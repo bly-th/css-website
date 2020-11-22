@@ -6,7 +6,7 @@ module.exports = async function () {
     .then((json) => {
       if (json[0]) {
         return {
-          tag: json[0].name,
+          tag: json.filter((release) => release.prerelease == false)[0].name,
         };
       }
 
