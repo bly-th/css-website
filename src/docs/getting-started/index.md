@@ -17,7 +17,7 @@ Blyth CSS is available on [npm](https://www.npmjs.com/package/blyth-css) and req
 Install Blyth into your project’s package.json by running:
 
 ```bash
-npm install blyth-css --save-dev
+npm install @bly-th/css --save-dev
 ```
 
 #### Add project config to package.json
