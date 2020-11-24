@@ -12,13 +12,15 @@ Blyth CSS is available on [npm](https://www.npmjs.com/package/blyth-css) and req
 
 ### Installing Blyth into an existing repository
 
-#### Install Blyth into package.json
+#### Install Blyth CLI
 
-Install Blyth into your project’s package.json by running:
+Install Blyth globally by running:
 
 ```bash
-npm install @bly-th/css --save-dev
+npm install @bly-th/css -g
 ```
+
+This will install Blyth CLI globally, so you can run `blyth` commands from any directory.
 
 #### Add project config to package.json
 
@@ -27,26 +29,12 @@ Blyth is versatile in it's situation. In theory, it can run in any project and c
 To get us started, add the following lines to your package.json:
 
 ```json
-  "bin": {
-    "blyth": "node_modules/@bly-th/css/src/index.js"
-  },
   "blyth": {
     "tokensOutputPath": "css/tokens.css",
     "utilityOutputPath": "css/utility"
   },
 ```
 
-These lines will do two things:
-
-- the `bin` config will add a shiny new command to your project workspace, so you can run easy to use [commands](/docs/commands/).
-- the `blyth` config will allow you to specify where you want Blyth to output generated CSS.
-
-#### Link our command
-
-Use the following command to allow us to use our `blyth` namespace command in the terminal
-
-```bash
-npm link
-```
+The `blyth` config will allow you to specify where you want Blyth to output generated CSS.
 
 Congratulations — you're now ready to go with Blyth!
