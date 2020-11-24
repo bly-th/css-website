@@ -38,3 +38,28 @@ To get us started, add the following lines to your package.json:
 The `blyth` config will allow you to specify where you want Blyth to output generated CSS.
 
 Congratulations — you're now ready to go with Blyth!
+
+#### Add Blyth locally
+
+Blyth can work locally, too:
+
+```bash
+npm install @bly-th/css@alpha --save-dev
+```
+
+You can include it within a projects dependencies so it can create new tokens as part of a build at deployment.
+
+```json
+  "scripts": {
+    "tokens": "blyth tokens",
+  },
+  "bin": {
+    "blyth": "node_modules/@bly-th/css/src/index.js"
+  },
+  "blyth": {
+    "tokensOutputPath": "css/tokens.css",
+    "utilityOutputPath": "css/utility"
+  },
+```
+
+The `bin` config will add a shiny new command to your project workspace, so you can run easy to use [commands](/docs/commands/). For example, you could update the `blyth.config.js` file on GitHub directly, and then run `npm run tokens` to generate tokens when the project is being deployed. Nifty.
