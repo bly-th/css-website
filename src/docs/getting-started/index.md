@@ -17,7 +17,7 @@ Blyth CSS is available on [npm](https://www.npmjs.com/package/blyth-css) and req
 Install Blyth globally by running:
 
 ```bash
-npm install @bly-th/css -g
+npm install @bly-th/css@alpha -g
 ```
 
 This will install Blyth CLI globally, so you can run `blyth` commands from any directory.
