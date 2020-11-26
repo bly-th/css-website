@@ -16,11 +16,13 @@ eleventyNavigation:
     <div class="wrapper">
       {% oswindow %}
         {% highlight "html" %}
-<h2 class="color-red">Test</h2>
+<div class="[ card ] [ color-red ]">
+  <h2>Your heading here</h2>
+</div>
         {% endhighlight %}
         {% highlight "css" %}
-.card h2 {
-  color: var(--color-red);
+.card {
+  background: var(--color-red);
 }
         {% endhighlight %}
       {% endoswindow %}
