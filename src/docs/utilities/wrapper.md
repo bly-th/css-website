@@ -10,5 +10,5 @@ eleventyNavigation:
 Our wrapper utility is constructed as follows:
 
 ```css
-{{ "utility/css/visibility.css" | blyth | safe }}
+{{ "utility/css/wrapper.css" | blyth | safe }}
 ```
