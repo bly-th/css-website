@@ -10,8 +10,7 @@ Array.from(codeWindows).forEach((codeWindow) => {
   codeWindow.innerHTML = '';
 
   const typewriter = new Typed(codeWindow, {
-    loop: true,
-    typeSpeed: 70,
+    typeSpeed: 35,
     strings: codeEntries,
   });
 

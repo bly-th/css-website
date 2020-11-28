@@ -14,7 +14,7 @@ eleventyNavigation:
 
   <div class="faux-background">
     <div class="wrapper">
-      {% oswindow %}
+        {% oswindow %}
         {% highlight "html" %}
 <div class="[ card ] [ color-red ]">
   <h2>Your heading here</h2>
@@ -28,6 +28,7 @@ eleventyNavigation:
       {% endoswindow %}
     </div>
   </div>
+  </div>
 </section>
 
 <section class="bg-dark-background pad-top-900">
@@ -40,11 +41,18 @@ eleventyNavigation:
 
   <div class="faux-background faux-background--light">
     <div class="wrapper">
-      {% oswindow %}
-        {% highlight "js" %}
-  {{ "tokens/default/config.js" | blyth | safe }}
-        {% endhighlight %}
-      {% endoswindow %}
+      <div class="window-stack">
+        {% oswindow %}
+          {% highlight "js" %}
+{% include "../blyth.config.js" %}
+          {% endhighlight %}
+        {% endoswindow %}
+        {% oswindow "css", "Output" %}
+          {% highlight "css" %}
+{% include "./_includes/css/utility/tokens.css" %}
+          {% endhighlight %}
+        {% endoswindow %}
+      </div>
     </div>
   </div>
 </section>
@@ -59,20 +67,18 @@ eleventyNavigation:
 
   <div class="faux-background">
     <div class="wrapper">
-      {% oswindow "bash" %}
-        {% highlight "bash" %}
-blyth tokens add reset
-        {% endhighlight %}
-        {% highlight "bash" %}
-blyth tokens add auto-grid
-        {% endhighlight %}
-        {% highlight "bash" %}
-blyth tokens add wrapper
-        {% endhighlight %}
-        {% highlight "bash" %}
-blyth tokens add visually-hidden
-        {% endhighlight %}
-      {% endoswindow %}
+      <div class="window-stack">
+        {% oswindow "bash" %}
+          {% highlight "bash" %}
+  blyth tokens add reset
+          {% endhighlight %}
+        {% endoswindow %}
+        {% oswindow "css", "Output" %}
+          {% highlight "css" %}
+  {% include "./_includes/css/utility/reset.css" %}
+          {% endhighlight %}
+        {% endoswindow %}
+      </div>
     </div>
   </div>
 </section>
@@ -99,5 +105,5 @@ blyth tokens add visually-hidden
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" defer></script>
-<script src="js/components/oswindow.js" defer></script>
+<script src="/js/vendor/typed.js" defer></script>
+<script src="/js/components/oswindow.js" defer></script>

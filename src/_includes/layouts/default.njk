@@ -1,4 +1,5 @@
 {% set css %}
+  {% include "css/utility/auto-grid.css" %}
   {% include "css/utility/breakout-button.css" %}
   {% include "css/utility/faux-background.css" %}
   {% include "css/utility/measure.css" %}
@@ -15,6 +16,7 @@
   {% include "css/components/horizontal-list.css" %}
   {% include "css/components/os-window.css" %}
   {% include "css/components/vertical-list.css" %}
+  {% include "css/components/window-stack.css" %}
   {% include "css/global/code.css" %}
   {% include "css/global/global.css" %}
   {% include "css/global/site-footer.css" %}
@@ -50,9 +52,8 @@
           
           <nav class="site-header__navigation">
             <ul class="horizontal-list">
-              <li><a href="#">Why Blyth?</a></li>
+              <li><a href="/why/">Why Blyth?</a></li>
               <li><a href="/docs/">Documentation</a></li>
-              <li><a href="#">Resources</a></li>
             </ul>
           </nav>
         </div>

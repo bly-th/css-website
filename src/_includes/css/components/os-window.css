@@ -4,10 +4,12 @@
   position: relative;
   border-radius: 8px;
   background: var(--color-dark-elevated);
+  overflow: hidden;
 }
 
 .os-window__toolbar {
   display: flex;
+  align-items: center;
   padding: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   flex: 0 0;
@@ -19,6 +21,10 @@
   height: 0.75rem;
   margin-right: 0.5rem;
   border-radius: 100%;
+}
+
+.os-window__toolbar h2 {
+  margin: 0 0 0 0.5rem;
 }
 
 .os-window__inner {

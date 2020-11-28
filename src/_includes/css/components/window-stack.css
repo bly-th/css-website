@@ -1,0 +1,25 @@
+.window-stack {
+  position: relative;
+}
+
+.window-stack .os-window {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 48em) {
+  .window-stack .os-window {
+    margin-bottom: 0;
+  }
+
+  .window-stack .os-window:last-child {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: max(18rem, 50%);
+    box-shadow: var(--shadow-large);
+  }
+
+  .window-stack .os-window:last-child .os-window__inner {
+    height: 20vw;
+  }
+}
