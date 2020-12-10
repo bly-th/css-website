@@ -20,7 +20,7 @@ text: {
 By including `responsive: true,` in the token, Blyth will automatically generate responsive classes for you! It'll allow you to create HTML like this:
 
 ```html
-<h3 class="text-400 lg:text-900">Test</h2>
+<h2 class="text-400 lg:text-900">Test</h2>
 ```
 
 This will generate a heading that's small on mobile, but large on large devices. You have complete control over your breakpoints, too:
