@@ -50,7 +50,7 @@
             <li><a href="https://github.com/bly-th/css" target="_blank" rel="noopener noreferrer">{% include '../../img/icons/github.svg' %}</a></li>
           </ul>
           
-          <nav class="site-header__navigation">
+          <nav class="site-header__navigation" aria-label="Primary navigation">
             <ul class="horizontal-list">
               <li><a href="/why/">Why Blyth?</a></li>
               <li><a href="/docs/">Documentation</a></li>
@@ -60,7 +60,9 @@
       </div>
     </header>
     
-    {{ content | safe }}
+    <main>
+      {{ content | safe }}
+    </main>
 
     <footer class="[ site-footer ] [ text-align-center ]">
       <div class="wrapper">
