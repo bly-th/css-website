@@ -44,7 +44,7 @@ Congratulations — you're now ready to go with Blyth!
 Blyth can work locally, too:
 
 ```bash
-npm install @bly-th/css@alpha --save-dev
+npm install @bly-th/css --save-dev
 ```
 
 You can include it within a projects dependencies so it can create new tokens as part of a build at deployment.
