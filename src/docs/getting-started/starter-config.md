@@ -9,7 +9,7 @@ eleventyNavigation:
 
 Here's the default config to get you started with Blyth:
 
+<!-- prettier-ignore -->
 ```js
-// prettier-ignore
-{{ "tokens/default/config.js" | blyth | safe }}
+  {{ "tokens/default/config.js" | blyth | safe }}
 ```
