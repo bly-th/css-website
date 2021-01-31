@@ -17,4 +17,4 @@ The best way to see how design tokens work, is for us to jump right in!
 {{ "tokens/default/config.js" | blyth | safe }}
 ```
 
-You can learn more about the tokens properties, such as [property](/docs/tokens/property/), [responsive](/docs/tokens/responsive/) and [variable](/docs/tokens/variable/).
+You can learn more about the tokens properties, such as [property](/docs/tokens/property/), [responsive](/docs/tokens/responsive/), [variable](/docs/tokens/variable/) and [items](/docs/tokens/items/).
