@@ -3,6 +3,7 @@ title: Visibility
 eleventyNavigation:
   key: Visibility
   parent: Utilities
+  order: 7
 ---
 
 # Visibility Utility

@@ -3,6 +3,7 @@ title: Auto Grid
 eleventyNavigation:
   key: Auto Grid
   parent: Utilities
+  order: 1
 ---
 
 # Auto Grid Utility

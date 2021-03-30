@@ -3,6 +3,7 @@ title: Split Pair
 eleventyNavigation:
   key: Split Pair
   parent: Utilities
+  order: 5
 ---
 
 # Split Pair Utility

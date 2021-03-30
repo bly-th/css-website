@@ -17,6 +17,16 @@ const theme = {
     base: "'Fira Code', monospace",
   },
   sizeScale: {
+    200: 'var(--space-3xs-2xs)',
+    300: 'var(--space-2xs-xs)',
+    400: 'var(--space-xs-s)',
+    500: 'var(--space-s-m)',
+    600: 'var(--space-m-l)',
+    700: 'var(--space-l-xl)',
+    800: 'var(--space-xl-2xl)',
+    900: 'var(--space-2xl-3xl)',
+  },
+  textScale: {
     200: 'var(--step--2)',
     300: 'var(--step--1)',
     400: 'var(--step-0)',
@@ -105,9 +115,10 @@ module.exports = {
       variable: true,
     },
     text: {
-      items: theme.sizeScale,
+      items: theme.textScale,
       responsive: true,
       property: 'font-size',
+      variable: true,
     },
     'text-align': {
       items: {

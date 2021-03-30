@@ -3,6 +3,7 @@ title: Type Scale
 eleventyNavigation:
   key: Type Scale
   parent: Utilities
+  order: 6
 ---
 
 # Type Scale Utility

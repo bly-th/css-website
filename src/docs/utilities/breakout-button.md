@@ -3,6 +3,7 @@ title: Breakout Button
 eleventyNavigation:
   key: Breakout Button
   parent: Utilities
+  order: 2
 ---
 
 # Breakout Button Utility
