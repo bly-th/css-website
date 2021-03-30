@@ -41,10 +41,9 @@ const theme = {
 module.exports = {
   theme,
   tokens: {
-    text: {
-      items: theme.sizeScale,
-      responsive: true,
-      property: 'font-size',
+    'pad-top': {
+      items: theme.spaceScale,
+      property: 'padding-top',
     },
   },
 };
