@@ -50,5 +50,5 @@ module.exports = {
 ```
 
 ```html
-<h2 class="text-900">Heading</h2>
+<div class="pad-top-900"></div>
 ```
