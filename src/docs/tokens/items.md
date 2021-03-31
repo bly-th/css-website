@@ -5,7 +5,7 @@ eleventyNavigation:
   parent: Design Tokens
 ---
 
-## Properties
+## Items
 
 Let's take a look at how the items property works for our tokens:
 
