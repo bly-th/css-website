@@ -48,5 +48,6 @@ module.exports = (config) => {
       output: 'dist',
     },
     passthroughFileCopy: true,
+    markdownTemplateEngine: 'njk',
   };
 };

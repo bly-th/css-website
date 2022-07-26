@@ -3,7 +3,7 @@ title: Reset
 eleventyNavigation:
   key: Reset
   parent: Utilities
-  order: 4
+  order: 3
 ---
 
 # Reset Utility

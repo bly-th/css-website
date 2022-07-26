@@ -19,11 +19,11 @@
   "license": "GPL-2.0 AND MIT",
   "homepage": "https://github.com/ryangittings/blyth-css-docs",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
-    "@bly-th/css": "^0.5.2",
+    "@bly-th/css": "^0.6.1",
     "clean-css": "^4.2.3",
     "node-fetch": "^2.6.0",
     "node-html-parser": "^2.1.0"

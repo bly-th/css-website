@@ -3,7 +3,7 @@ title: Space Scale
 eleventyNavigation:
   key: Space Scale
   parent: Utilities
-  order: 5
+  order: 4
 ---
 
 # Space Scale Utility

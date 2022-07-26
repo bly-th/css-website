@@ -2,7 +2,7 @@
 title: Flow
 eleventyNavigation:
   key: Flow
-  parent: Utilities
+  parent: Composition
   order: 3
 ---
 
@@ -11,7 +11,7 @@ eleventyNavigation:
 Our flow utility is constructed as follows:
 
 ```css
-{{ "utility/css/flow.css" | blyth | safe }}
+{{ "composition/css/flow.css" | blyth | safe }}
 ```
 
 ## Purpose

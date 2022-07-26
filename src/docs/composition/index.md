@@ -1,12 +1,12 @@
 ---
-title: Utilities
+title: Composition
 eleventyNavigation:
-  key: Utilities
+  key: Composition
   parent: Home
-  order: 5
+  order: 4
 ---
 
-## Utilities
+## Composition
 
 Utilities allow CSS programmers to write consistent, reusable code that's versatile, reusable and flexible. They're small CSS classes that can be used reused across the site, and tweaked where necessary.
 
