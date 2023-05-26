@@ -1,17 +1,15 @@
 ---
 title: Tokens
 eleventyNavigation:
-  key: tokens
+  key: Tokens
   parent: Commands
-  order: 2
+  order: 3
 ---
 
 ## Tokens Command
 
-To generate your tokens based upon your [configuration](/docs/getting-started/starter-config/), just run:
+To generate tokens via Tailwind, run
 
 ```bash
 blyth tokens
 ```
-
-This will output a brand new CSS file to the `tokensOutputPath` set in your package.json file.
