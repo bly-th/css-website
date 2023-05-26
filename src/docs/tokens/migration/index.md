@@ -89,11 +89,11 @@ module.exports = {
       },
       property: 'max-width',
     },
-    'pad-top': {
+    'pt-': {
       items: theme.sizeScale,
       property: 'padding-top',
     },
-    'pad-bottom': {
+    'pb-': {
       items: theme.sizeScale,
       property: 'padding-bottom',
     },

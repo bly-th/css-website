@@ -5,12 +5,10 @@ eleventyNavigation:
   key: Home
 ---
 
-<section class="pad-top-900">
-  <div class="[ wrapper ] [ text-align-center ]">
-    <div class="measure-long">
-      <h1>A truly versatile CSS toolkit.</h1>
-      <p>Made with ❤️ for HTML & CSS programmers who love lightweight, clean, reusable and scalable code. Blyth will allow you to organise properties every site has like fonts, colours, spacing, sizing and basically, anything you want.</p>
-    </div>
+<section class="pt-900">
+  <div class="[ wrapper ] [ max-w-prose text-center ]">
+    <h1>A truly versatile CSS toolkit.</h1>
+    <p>Made with ❤️ for HTML & CSS programmers who love lightweight, clean, reusable and scalable code. Blyth will allow you to organise properties every site has like fonts, colours, spacing, sizing and basically, anything you want.</p>
   </div>
 
   <div class="faux-background">
@@ -32,12 +30,10 @@ eleventyNavigation:
   </div>
 </section>
 
-<section class="bg-dark-background pad-top-900">
-  <div class="[ wrapper ] [ text-align-center ]">
-    <div class="measure-long">
-      <h2>Create a CSS design system.</h2>
-      <p>Blyth can help you generate design tokens to keep propertes such as spacing, typography and colour consistent & reusable. They’re also available as both CSS variables and HTML classes. Wicked.</p>
-    </div>
+<section class="bg-dark-background pt-900">
+  <div class="[ wrapper ] [ max-w-prose text-center ]">
+    <h2>Create a CSS design system.</h2>
+    <p>Blyth can help you generate design tokens to keep propertes such as spacing, typography and colour consistent & reusable. They’re also available as both CSS variables and HTML classes. Wicked.</p>
   </div>
 
   <div class="faux-background faux-background--light">
@@ -45,12 +41,12 @@ eleventyNavigation:
       <div class="window-stack">
         {% oswindow %}
           {% highlight "js" %}
-{% include "../blyth.config.js" %}
+{% include "../tailwind.config.js" %}
           {% endhighlight %}
         {% endoswindow %}
         {% oswindow "css", "Output" %}
           {% highlight "css" %}
-{% include "./_includes/css/utility/tokens.css" %}
+{% include "./_includes/css/global/tokens.css" %}
           {% endhighlight %}
         {% endoswindow %}
       </div>
@@ -58,12 +54,10 @@ eleventyNavigation:
   </div>
 </section>
 
-<section class="pad-top-900">
-  <div class="[ wrapper ] [ text-align-center ]">
-    <div class="measure-long">
-      <h2>Scaffold out CSS utilities.</h2>
-      <p>How often do you find yourself using the same code across projects? CSS resets, wrappers and small accessbility helpers like visually hidden? Blyth can generate these for your project with just one command.</p>
-    </div>
+<section class="pt-900">
+  <div class="[ wrapper ] [ max-w-prose text-center ]">
+    <h2>Scaffold out CSS utilities.</h2>
+    <p>How often do you find yourself using the same code across projects? CSS resets, wrappers and small accessbility helpers like visually hidden? Blyth can generate these for your project with just one command.</p>
   </div>
 
   <div class="faux-background">
@@ -84,12 +78,10 @@ eleventyNavigation:
   </div>
 </section>
 
-<section class="pad-top-900 pad-bottom-900 bg-dark-background">
-  <div class="[ wrapper ] [ text-align-center ]">
-    <div class="measure-long">
-      <h2>It’s platform agnostic, too.</h2>
-      <p>Blyth is just a <strong>toolkit</strong>. It takes a bunch of config, and outputs CSS files to use in any type of project, be it a static site, React build or Next JS application. You just need to set the project config in your package.json file. This means the CSS you write across all your projects can be consistent, and versatile. Tis’ beautiful.</p>
-    </div>
+<section class="pt-900 pb-900 bg-dark-background">
+  <div class="[ wrapper ] [ max-w-prose text-center ]">
+    <h2>It’s platform agnostic, too.</h2>
+    <p>Blyth is just a <strong>toolkit</strong>. It takes a bunch of config, and outputs CSS files to use in any type of project, be it a static site, React build or Next JS application. You just need to set the project config in your package.json file. This means the CSS you write across all your projects can be consistent, and versatile. Tis’ beautiful.</p>
   </div>
 
   <div class="wrapper">

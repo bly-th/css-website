@@ -1,15 +1,13 @@
 {% set css %}
-  {% include "css/utility/auto-grid.css" %}
   {% include "css/utility/breakout-button.css" %}
   {% include "css/utility/faux-background.css" %}
-  {% include "css/utility/measure.css" %}
   {% include "css/utility/reset.css" %}
-  {% include "css/utility/space-scale.css" %}
-  {% include "css/utility/split-pair.css" %}
-  {% include "css/utility/tokens.css" %}
-  {% include "css/utility/type-scale.css" %}
   {% include "css/utility/visibility.css" %}
   {% include "css/utility/wrapper.css" %}
+
+  {% include "css/composition/grid.css" %}
+  {% include "css/composition/flow.css" %}
+
   {% include "css/components/breadcrumbs.css" %}
   {% include "css/components/button.css" %}
   {% include "css/components/content-wrapper.css" %}
@@ -18,11 +16,14 @@
   {% include "css/components/os-window.css" %}
   {% include "css/components/vertical-list.css" %}
   {% include "css/components/window-stack.css" %}
+
   {% include "css/global/code.css" %}
   {% include "css/global/global.css" %}
   {% include "css/global/site-footer.css" %}
   {% include "css/global/site-header.css" %}
   {% include "css/global/type.css" %}
+
+  {% include "css/global/tokens.css" %}
 {% endset %}
 <!doctype html>
 <html class="no-js" lang="en">
@@ -65,7 +66,7 @@
       {{ content | safe }}
     </main>
 
-    <footer class="[ site-footer ] [ text-align-center ]">
+    <footer class="[ site-footer ] [ text-center ]">
       <div class="wrapper">
         <div class="gap-bottom-200">
           <p>Made with ❤️ for HTML & CSS programmers</p>

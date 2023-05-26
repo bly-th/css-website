@@ -1,7 +1,7 @@
 ---
 title: Tokens
 eleventyNavigation:
-  key: Tokens
+  key: tokens
   parent: Commands
   order: 3
 ---
