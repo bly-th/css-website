@@ -30,7 +30,6 @@ To get us started, add the following lines to your package.json:
 
 ```json
   "blyth": {
-    "tokensOutputPath": "css/tokens.css",
     "utilityOutputPath": "css/utility",
     "compositionOutputPath": "css/composition"
   },
@@ -52,15 +51,10 @@ You can include it within a projects dependencies so it can create new tokens as
 
 ```json
   "scripts": {
-    "tokens": "blyth tokens",
+    "tokens": "NODE_ENV=production npx tailwindcss -o css/tokens.css --watch",
   },
   "bin": {
     "blyth": "node_modules/@bly-th/css/src/index.js"
-  },
-  "blyth": {
-    "tokensOutputPath": "css/tokens.css",
-    "utilityOutputPath": "css/utility",
-    "compositionOutputPath": "css/composition"
   },
 ```
 
