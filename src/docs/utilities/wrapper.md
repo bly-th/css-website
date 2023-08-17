@@ -21,12 +21,5 @@ The wrapper utility is a common utility used for container a site to a max width
 ## Example
 
 ```html
-<div class="wrapper wrapper--short"></div>
-```
-
-```css
-.wrapper--short {
-  --wrapper-max-width: 48rem;
-  --wrapper-padding: 2rem;
-}
+<div class="wrapper"></div>
 ```
