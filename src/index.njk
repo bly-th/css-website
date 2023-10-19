@@ -65,7 +65,7 @@ eleventyNavigation:
       <div class="window-stack">
         {% oswindow "bash" %}
           {% highlight "bash" %}
-  blyth tokens add reset
+  blyth utility add reset
           {% endhighlight %}
         {% endoswindow %}
         {% oswindow "css", "Output" %}
@@ -89,8 +89,9 @@ eleventyNavigation:
       {% highlight "json" %}
 {
   "blyth": {
-    "tokensOutputPath": "/css/utility/tokens.css",
-    "utilityOutputPath": "/css/utility"
+    "tokensOutputPath": "src/_includes/css/global/tokens.css",
+    "utilityOutputPath": "src/_includes/css/utility",
+    "compositionOutputPath": "src/_includes/css/composition"
   },
 }
       {% endhighlight %}
