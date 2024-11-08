@@ -14,8 +14,7 @@
   },
   "blyth": {
     "tokensOutputPath": "src/_includes/css/global/tokens.css",
-    "utilityOutputPath": "src/_includes/css/utility",
-    "compositionOutputPath": "src/_includes/css/composition"
+    "utilityOutputPath": "src/_includes/css/utility"
   },
   "author": "Ryan Gittings",
   "license": "GPL-2.0 AND MIT",
