@@ -6,7 +6,6 @@ class FontSizeConverter extends HTMLElement {
   connectedCallback() {
     // Add event listener to the convert button
     this.querySelector('#convertButton').addEventListener('click', () => this.convertFontSize());
-    this.convertFontSize();
   }
 
   convertFontSize() {

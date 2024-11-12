@@ -15,26 +15,7 @@ eleventyNavigation:
   <div class="wrapper">
     <font-size-converter class="flow">
       <label for="cssInput">Paste your CSS variables here:</label>
-      <textarea id="cssInput" rows="15" placeholder="Paste CSS here...">
-        /* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1140,16,1.2,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
-        */
-        
-        :root {
-        --step--2: clamp(0.6944rem, 0.7588rem + -0.0903vw, 0.7407rem);
-        --step--1: clamp(0.8333rem, 0.8333rem + 0vw, 0.8333rem);
-        --step-0: clamp(0.9375rem, 0.9131rem + 0.122vw, 1rem);
-        --step-1: clamp(1.0547rem, 0.998rem + 0.2835vw, 1.2rem);
-        --step-2: clamp(1.1865rem, 1.0876rem + 0.4946vw, 1.44rem);
-        --step-3: clamp(1.3348rem, 1.1814rem + 0.7671vw, 1.728rem);
-        --step-4: clamp(1.5017rem, 1.2785rem + 1.1159vw, 2.0736rem);
-        --step-5: clamp(1.6894rem, 1.3776rem + 1.5589vw, 2.4883rem);
-        --step-6: clamp(1.9006rem, 1.477rem + 2.1179vw, 2.986rem);
-        --step-7: clamp(2.1382rem, 1.5742rem + 2.8196vw, 3.5832rem);
-        --step-8: clamp(2.4054rem, 1.6661rem + 3.6964vw, 4.2998rem);
-        --step-9: clamp(2.7061rem, 1.7486rem + 4.7877vw, 5.1598rem);
-        --step-10: clamp(3.0444rem, 1.8161rem + 6.1412vw, 6.1917rem);
-        }
-      </textarea>
+      <textarea id="cssInput" rows="15" placeholder="Paste CSS here..."></textarea>
       <button id="convertButton" class="button">Convert to Tailwind fontSize</button>
       <pre id="output">Converted Tailwind fontSize configuration will appear here...</pre>
     </font-size-converter>
