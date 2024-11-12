@@ -98,6 +98,11 @@
   padding: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem)
 }
 
+.py-900 {
+  padding-top: clamp(5.25rem, calc(3.79rem + 7.32vw), 9.00rem);
+  padding-bottom: clamp(5.25rem, calc(3.79rem + 7.32vw), 9.00rem)
+}
+
 .pb-700 {
   padding-bottom: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.50rem)
 }

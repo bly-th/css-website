@@ -1,0 +1,25 @@
+---
+title: Utopia to Tailwind
+eleventyNavigation:
+  key: Utopia to Tailwind
+  order: 3
+---
+
+<section class="py-900">
+  <div class="[ wrapper ] [ max-w-prose text-center ]">
+    <h1>Utopia to Tailwind Tool</h1>
+  </div>
+</section>
+
+<section>
+  <div class="wrapper">
+    <font-size-converter class="flow">
+      <label for="cssInput">Paste your CSS variables here:</label>
+      <textarea id="cssInput" rows="15" placeholder="Paste CSS here..."></textarea>
+      <button id="convertButton" class="button">Convert to Tailwind fontSize</button>
+      <pre id="output">Converted Tailwind fontSize configuration will appear here...</pre>
+    </font-size-converter>
+
+    <script src="/js/components/utopia-tailwind.js" type="module"></script>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+[type='color'],
+[type='date'],
+[type='datetime-local'],
+[type='datetime'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  border: 1px solid currentColor;
+  border-radius: var(--rounded-md);
+  padding: 0.5em;
+}
