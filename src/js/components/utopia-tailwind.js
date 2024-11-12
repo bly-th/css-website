@@ -6,6 +6,7 @@ class FontSizeConverter extends HTMLElement {
   connectedCallback() {
     // Add event listener to the convert button
     this.querySelector('#convertButton').addEventListener('click', () => this.convertFontSize());
+    this.convertFontSize();
   }
 
   convertFontSize() {
@@ -31,11 +32,13 @@ class FontSizeConverter extends HTMLElement {
     }
 
     // Determine increment based on the number of steps below 0
-    const increment = 400 / steps.filter(item => item.stepNumber <= 0).length;
+    const stepsBelow = steps.filter(item => item.stepNumber <= 0)
+    const increment = stepsBelow > 3 ? 400 / stepsBelow.length : 100;
 
     // Second pass: Generate the Tailwind fontSize configuration
     steps.forEach(({ stepNumber, clampValue }) => {
-      const tailwindKey = stepBase + stepNumber * increment;
+      const multiplier = stepNumber < 0 ? increment : 100;
+      const tailwindKey = stepBase + stepNumber * multiplier;
       fontSize[tailwindKey] = `clamp(${clampValue})`;
     });
 
