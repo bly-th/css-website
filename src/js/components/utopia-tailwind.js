@@ -46,11 +46,16 @@ class FontSizeConverter extends HTMLElement {
   }
 
   displayResult(fontSize) {
-    // Convert the fontSize object to a JSON string with indentation for readability
-    const formattedFontSize = JSON.stringify(fontSize, null, 2);
+    // Create a formatted string with numeric keys without quotes
+    const formattedFontSize = Object.entries(fontSize)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(',\n');
+
+    // Format it as an object-like output for readability
+    const outputString = `{\t\n${formattedFontSize}\n}`;
 
     // Update the output element to display the result
-    this.querySelector('#output').textContent = formattedFontSize;
+    this.querySelector('#output').textContent = outputString;
   }
 }
 
