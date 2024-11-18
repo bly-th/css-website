@@ -42,17 +42,23 @@ class FontSizeConverter extends HTMLElement {
     });
 
     // Display the result in the component
-    this.displayResult(fontSize);
+    this.displayResult(fontSize, css.slice(0, css.indexOf("\n")));
   }
 
-  displayResult(fontSize) {
-    // Create a formatted string with numeric keys without quotes
+  displayResult(fontSize, link) {
+    // Add the link as a comment
+    const header = `${link}\nfontSize: {\n`;
+
+    // Create the fontSize entries with the required tab and format
     const formattedFontSize = Object.entries(fontSize)
-      .map(([key, value]) => `${key}: ${value}`)
+      .map(([key, value]) => `\t${key}: '${value}'`)
       .join(',\n');
 
-    // Format it as an object-like output for readability
-    const outputString = `{\t\n${formattedFontSize}\n}`;
+    // Wrap it all with the closing bracket and comma
+    const footer = '\n},';
+
+    // Combine header, formatted content, and footer
+    const outputString = `${header}${formattedFontSize}${footer}`;
 
     // Update the output element to display the result
     this.querySelector('#output').textContent = outputString;
